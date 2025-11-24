@@ -34,6 +34,12 @@ Entities are annotated as character spans with labels and PII flags, in noisy, l
 - Custom code for entity span extraction, PII flagging, and noisy data handling.
 - All supporting scripts (`src/dataset.py`, `src/labels.py`, `src/model.py`) included.
 
+## Hyperparameters
+The key Hyperparameters used are -
+- Epochs: 3
+- Batch size: 8
+- Learning rate: 5e-5
+
 ## Code Structure
 - `src/train.py`: Train the token classifier on noisy PII data.
 - `src/predict.py`: Run inference to get predicted entities from transcripts.
