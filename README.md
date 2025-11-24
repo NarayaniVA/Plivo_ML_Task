@@ -5,6 +5,9 @@ This repository contains the implementation of a token-level Named Entity Recogn
 
 This is the submission codebase for the IIT Madras PII NER challenge 2025.
 
+## Pretrained Model Download
+The trained model checkpoint files are too large to upload to this repository. Please download the model folder from the following Google Drive link:
+https://drive.google.com/drive/folders/1oR-u7hROSrn8K2oKrAwsML6V_2998j8Q?usp=drive_link
 
 ## Dataset and Noise
 - Training and dev datasets use realistic noise to simulate real STT transcripts.
