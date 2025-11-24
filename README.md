@@ -73,7 +73,6 @@ python src/measure_latency.py --model_dir out2 --input data/dev2.jsonl --runs 50
 | CREDIT_CARD  |    0.194  | 0.333  | 0.246  |
 | LOCATION     |    0.027  | 0.023  | 0.025  |
 
----
 
 - **Macro-F1:** 0.408
 
@@ -89,12 +88,20 @@ python src/measure_latency.py --model_dir out2 --input data/dev2.jsonl --runs 50
 
 The somewhat moderate scores reflect the challenge and realism of highly noisy STT-style transcription and entity disturbance in both context and value segments.
 
-## Data Generation Details
+## Dataset Generation
 
+The training and development datasets are synthetically generated using the scripts in `scripts/generate_dataset.py` combined with helper functions in `src/data_utils.py`.
+
+- The generator uses realistic templates with noisy PII and context fillers to simulate real STT transcripts.
 - Data generation uses realistic templates, injections of conversational fillers, lowercasing, and robust entity tracking post-noise addition.
 - Contextual noise and fillers are applied holistically to both train and dev datasets, ensuring robustness.
 - Entity spans are recalculated post-noise to maintain annotation accuracy.
-- Full code for dataset construction and noise application is provided.
+- Run the following command to generate the datasets locally:
+
+python scripts/generate_dataset.py
+
+- This script creates the noisy datasets (`data/train2.jsonl` and `data/dev2.jsonl`) with annotated entities.
+
 
 ## Limitations and Future Work
 
