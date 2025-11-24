@@ -89,6 +89,13 @@ python src/measure_latency.py --model_dir out2 --input data/dev2.jsonl --runs 50
 
 The somewhat moderate scores reflect the challenge and realism of highly noisy STT-style transcription and entity disturbance in both context and value segments.
 
+**Latency over 50 runs (batch_size=1):**
+
+- p50 latency: 46.59 ms
+- p95 latency: 107.65 ms
+
+The relatively high latency compared to the target reflects the use of a transformer-based model on CPU without optimization. There is opportunity to optimize inference speed to meet stricter latency budgets.
+
 ## Dataset Generation
 
 The training and development datasets are synthetically generated using the scripts in `scripts/generate_dataset.py` combined with helper functions in `src/data_utils.py`.
