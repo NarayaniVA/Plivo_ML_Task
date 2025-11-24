@@ -21,8 +21,7 @@ This is the submission codebase for the IIT Madras PII NER challenge 2025.
 
 Dataset files:
 - `data/train2.jsonl`: Training dataset (550 examples)
-- `data/dev2.jsonl`: Development/Validation dataset (150 examples)
-- `data/test.jsonl`: Test dataset for final evaluation
+- `data/dev2.jsonl`: Development dataset (150 examples)
 
 Entities are annotated as character spans with labels and PII flags, in noisy, lowercased, filler-rich STT-like transcription.
 
