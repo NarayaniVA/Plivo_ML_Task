@@ -36,7 +36,8 @@ Entities are annotated as character spans with labels and PII flags, in noisy, l
 - `src/predict.py`: Run inference to get predicted entities from transcripts.
 - `src/eval_span_f1.py`: Evaluate per-entity and macro F1 scores.
 - `src/measure_latency.py`: Script to measure p50/p95 inference latency of the model.
-- Dataset generation scripts and utilities included.
+- `src/data_utils.py`: Helper functions and templates for synthetic dataset generation with noise injection.
+- `scripts/generate_dataset.py`: Main script to generate noisy training and dev datasets using data_utils.py.
 
 ## Usage
 
