@@ -5,10 +5,19 @@ This repository contains the implementation of a token-level Named Entity Recogn
 
 This is the submission codebase for the IIT Madras PII NER challenge 2025.
 
-## Dataset
-- **Generated datasets (train & dev)** incorporate a wide range of realistic, real-world noise. This includes sentence-level noise, contextual filler tokens (like 'uh', 'um', etc.), and holistic modifications both in and around entity spans.
-- Noise is added using a custom script (`data_utils.py` and others), ensuring entities appear in natural conversational context and are robustly tracked via start and end offsets.
-- Example scripts and parameters for dataset generation are included in the repository.
+
+## Dataset and Noise
+- Training and dev datasets use realistic noise to simulate real STT transcripts.
+
+- Noise includes fillers like "uh", "um", and word replacements for digits and symbols in PII entities.
+
+- Entities have phonetic misspellings, spelled-out dates, and symbol verbalizations.
+
+- Noise is applied both within entities and in surrounding context.
+
+- Entity spans are carefully recalculated to keep annotations accurate despite noise.
+
+- Sentence templates mix multiple entity types naturally with noise, making the dataset challenging and realistic.
 
 Dataset files:
 - `data/train2.jsonl`: Training dataset (550 examples)
